@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday 🎉</title>
   <style>
     body {
@@ -24,16 +25,13 @@
       color: #ff69b4;
     }
     .photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid #ff69b4;
-      margin: 20px auto;
+      width: 60%;      /* instead of 200px */
+      max-width: 250px;
+      height: auto;
     }
     .BirtdayVideo {
-      height: 250px;
-      margin: 20px auto;
+      width: 80%;      /* instead of 250px */
+      max-width: 350px;
       border-radius: 15px;
     }
     .buttons {
@@ -49,6 +47,8 @@
       font-size: 1.1em;
       cursor: pointer;
       transition: 0.3s;
+      width: 80%;
+      max_width: 300%;
     }
     .buttons button:hover {
       background: #ff1493;
@@ -133,3 +133,4 @@
 
 </body>
 </html>
+
