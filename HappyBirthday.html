@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+    }
+    .container {
+      display: none; /* hidden by default */
+      position: relative;
+      z-index: 2;
+    }
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #ff69b4;
+    }
+    .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ff69b4;
+      margin: 20px auto;
+    }
+    .BirtdayVideo {
+      height: 250px;
+      margin: 20px auto;
+      border-radius: 15px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons button {
+      background: #ff69b4;
+      border: none;
+      color: white;
+      padding: 10px 10px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .buttons button:hover {
+      background: #ff1493;
+    }
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: -10px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+    @font-face {
+      font-family: 'FTYGraff';
+      src: url('fty_graffiti.ttf') format('truetype');
+    }
+    .graffiti {
+      font-family: 'FTYGraff', cursive;
+      text-align: center;
+      font-size: 1.0em;
+      color: #ffccff;
+      max-width: 600px;
+      margin: 15px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CONTENT -->
+  <div class="container" id="birthdayPage">
+    <h1>Happy Birthday Rinkaso🎂🎉</h1>
+    <img src="viola.jpg" alt="Her Photo" class="photo">
+
+    <video class="BirtdayVideo" autoplay muted loop playsinline>
+      <source src="BirthdayVideo.mp4" type="video/mp4">
+    </video>
+
+    <h2>Born to stand out, today’s spotlight is yours 🔥🎉</h2>
+    <p class="graffiti">
+      Happy Birthday 🎂🎉 … just wanted to remind you how cherished you are as my friend.  
+      May your year overflow with blessings, laughter, and the kind of happiness no code could ever debug 😅💖.  
+      Jienjoy Viola 🥂🥂
+    </p>
+
+    <div class="buttons">
+      <h4>Would you like to:</h4>
+      <a href="https://wa.me/254729470603?text=Yes%20I%20want%20to%20go%20for%20a%20walk%20😊" target="_blank">
+        <button>Go for a Walk 🚶‍♀️</button>
+      </a>
+      <a href="https://wa.me/254729470603?text=Yes%20I%20want%20to%20watch%20a%20movie%20🍿" target="_blank">
+        <button>Watch a Movie 🎬</button>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Password gate
+    var password = "viola"; // change this
+    var input = prompt("Enter the secret password 🎂:");
+    if (input === password) {
+      document.getElementById("birthdayPage").style.display = "block";
+    } else {
+      document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:40vh;'>Access Denied 🚫</h1>";
+      document.body.style.background = "#000";
+    }
+
+    // Confetti generator (only if access granted)
+    if (input === password) {
+      for (let i = 0; i < 80; i++) {
+        let confetti = document.createElement("div");
+        confetti.className = "confetti";
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.backgroundColor = ["#ff0","#0ff","#f0f","#0f0","#f00"][Math.floor(Math.random()*5)];
+        confetti.style.animationDuration = (2 + Math.random() * 3) + "s";
+        document.body.appendChild(confetti);
+      }
+    }
+  </script>
+
+</body>
+</html>
