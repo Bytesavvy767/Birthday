@@ -12,7 +12,8 @@
       font-family: Arial, sans-serif;
       text-align: center;
       color: #fff;
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
     .container {
       display: none; /* hidden by default */
@@ -28,11 +29,15 @@
       width: 60%;      /* instead of 200px */
       max-width: 250px;
       height: auto;
+      border radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ff69b4;
+      margin: 20px auto;
     }
-    .BirtdayVideo {
+    .BirthdayVideo {
       width: 80%;      /* instead of 250px */
       max-width: 350px;
-      border-radius: 15px;
+      border-radius: 50%;
     }
     .buttons {
       margin-top: 20px;
@@ -133,4 +138,5 @@
 
 </body>
 </html>
+
 
